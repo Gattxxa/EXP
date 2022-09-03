@@ -1,0 +1,8 @@
+name: EXP
+version: 1.0
+main: org.gattxxa.exp.Main
+commands:
+  return:
+    description: Spend half of your current experience to teleport to the world spawn.
+    permission: exp.return
+    usage: hmage
