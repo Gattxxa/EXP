@@ -10,6 +10,8 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class CommandReturn implements CommandExecutor {
 	
 	@Override
@@ -33,6 +35,8 @@ public class CommandReturn implements CommandExecutor {
 		}
 		
 		else {
+			player.getWorld().playSound(player.getLocation(), Sound.BLOCK_GLASS_BREAK, 1, 1);
+			player.sendMessage(ChatColor.RED + "経験値が足りません！");
 			return true;
 		}
 		
